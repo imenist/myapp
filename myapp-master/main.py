@@ -22,10 +22,13 @@ from time import time
 from szys import SZYS
 import cmpAnswer
 def main():
-     a = SZYS(5,10)
-     a.store()
-    #cmpAnswer.cmp('docs\\Exercises.txt','docs\\Answers.txt','docs\\Grande.txt')
-     print('yes')
+     # a = SZYS(10000,10)
+     # a.store()
+    cmpAnswer.cmp('docs\\Exercises.txt','docs\\Answers.txt','docs\\Grande.txt')
+    print('yes')
 
 if __name__ == '__main__':
+    t1 = time()
     main()
+    t2 = time()
+    print(t2-t1)

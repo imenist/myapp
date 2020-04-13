@@ -33,10 +33,6 @@ def get_answer(formula):
             flag1 = 1
         elif item == '÷':
             flag1 = 2
-        elif item == "'":
-            flag1 = 3
-        elif item == '/':
-            flag1 = 4
         else:
             if flag1 == 0:
                 s.append(item)
@@ -46,16 +42,6 @@ def get_answer(formula):
                 flag1 = 0
             if flag1 == 2:
                 num = Fraction(s.pop(),item)
-                s.append(num)
-                flag1 = 0
-            if flag1 == 3:
-                num = s.pop()
-                t.append(num)
-                flag1 = 0
-            if flag1 == 4:
-                num = Fraction(s.pop(),item)
-                if(t):
-                  num += t.pop()
                 s.append(num)
                 flag1 = 0
     if len(s) == 1:
